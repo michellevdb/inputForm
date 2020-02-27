@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-database.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/style.css">
@@ -41,39 +41,40 @@
           </table>
 
 
-    <!-- Admin Input Form -->
+    <!-- Input Form -->
     <form>
         <table class="table"><h1>Add De-escalated Alert</h1>
         <div class="form-group">
-            <label for="date">Date</label>
+            <label for="date-input">Date</label>
             <input type="text" class="form-control" id="date-input">
         </div>
         <div class="form-group">
-            <label for="task-link">Task Link</label>
+            <label for="task-link-input">Task Link</label>
             <input type="text" class="form-control" id="task-link-input">
         </div>
         <div class="form-group">
-            <label for="reclassification">Reclassification</label>
+            <label for="reclassification-input">Reclassification</label>
             <input type="text" class="form-control" id="reclassfication-input">
         </div>
         <div class="form-group">
-            <label for="reason">Reason</label>
+            <label for="reason-input">Reason</label>
             <input type="text" class="form-control" id="reason-input">
         </div>
         <div class="form-group">
-            <label for="peer-review">Peer Review</label>
+            <label for="peer-review-input">Peer Review</label>
             <input type="text" class="form-control" id="peer-review-input">
         </div>
         <div class="form-group">
-            <label for="reported-by">Reported By</label>
+            <label for="reported-by-input">Reported By</label>
             <input type="text" class="form-control" id="reported-by-input">
         </div>
         <div class="form-group">
-            <label for="notes">Additional Notes</label>
+            <label for="notes-input">Additional Notes</label>
             <input type="text" class="form-control" id="notes-input">
         </div>
         </form>
-        <button type="button" class="btn btn-primary" id="submit-button">Submit</button>
+        
+        <button type="button" class="btn btn-primary btn-outline-light" id="submit">Submit</button>
         </div>
     </div> 
     <script type="text/javascript" src="assets/app.js"></script>

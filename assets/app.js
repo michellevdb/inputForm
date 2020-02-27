@@ -7,27 +7,25 @@ $(document).ready(function() {
         databaseURL: "https://inputform-3d1c3.firebaseio.com",
         projectId: "inputform-3d1c3",
         storageBucket: "inputform-3d1c3.appspot.com",
-        messagingSenderId: "612398159837",
-        appId: "1:612398159837:web:6cb2575df03c5a29cbc834",
-        measurementId: "G-2JPCV3KRQV"
+        messagingSenderId: "612398159837"
       };
   
     firebase.initializeApp(config);
     //firebase.analytics();
 
     var database = firebase.database();
-  
-      $("#submit-button").on("click", function(event){
-          
+    
+      $("#submit").on("click", function(event){
+       
           event.preventDefault();
-  
-          var $date = $("#date").val().trim();
-          var $task = $("#task-link").val().trim();
-          var $reclassify = $("#reclassification").val().trim();
-          var $reason = $("#reason").val().trim();
-          var $reviewBy= $("#peer-review").val().trim();
-          var $reportBy = $("#reported-by").val().trim();
-          var $notes = $("#notes").val().trim();
+          
+          var $date = $("#date-input").val().trim();
+          var $task = $("#task-link-input").val().trim();
+          var $reclassify = $("#reclassification-input").val().trim();
+          var $reason = $("#reason-input").val().trim();
+          var $reviewBy = $("#peer-review-input").val().trim();
+          var $reportBy = $("#reported-by-input").val().trim();
+          var $notes = $("#notes-input").val().trim();
   
           if ($date === "" || 
               $task === "" ||
@@ -36,7 +34,7 @@ $(document).ready(function() {
               $reviewBy === "" ||
               $reportBy === "" ||
               $notes === "") {
-  
+
               alert("Please Enter Alert Information");
   
           } else {
@@ -62,6 +60,7 @@ $(document).ready(function() {
           $("#peer-review-input").val("");
           $("#reported-by-input").val("");
           $("#notes-input").val("");
+
           };
   
       });
@@ -84,7 +83,7 @@ $(document).ready(function() {
               $("<td>").text(reason),
               $("<td>").text(reviewBy),
               $("<td>").text(reportBy),
-              $("<td>").text(notes)
+              $("<td>").text(notes),
           );
   
           $("#data-table > tbody").append(newData);
