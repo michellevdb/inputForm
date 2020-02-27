@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-database.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <title>De-escalated Alerts</title>
+</head>
+<body>
+    <!-- Header -->
+    <div class="container">
+
+        <div class="jumbotron jumbotron-fluid" id="header">
+                <div class="container">
+                  <h1 class="display-4">De-escalated Beacon Alerts</h1>
+                  <p class="lead"></p>
+                </div>
+              </div>
+
+    <!-- Input Data Table -->
+    <table class="table" id="data-table">
+            <h1>Recent Alerts</h1>
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Task Link</th>
+                <th scope="col">Reclassification</th>
+                <th scope="col">Reason</th>
+                <th scope="col">Peer Review</th>
+                <th scope="col">Reported By</th>
+                <th scope="col">Additional Notes</th>
+              </tr>
+            </thead>  
+            <tbody>       
+            </tbody>
+          </table>
+
+
+    <!-- Admin Input Form -->
+    <form>
+        <table class="table"><h1>Add De-escalated Alert</h1>
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="text" class="form-control" id="date-input">
+        </div>
+        <div class="form-group">
+            <label for="task-link">Task Link</label>
+            <input type="text" class="form-control" id="task-link-input">
+        </div>
+        <div class="form-group">
+            <label for="reclassification">Reclassification</label>
+            <input type="text" class="form-control" id="reclassfication-input">
+        </div>
+        <div class="form-group">
+            <label for="reason">Reason</label>
+            <input type="text" class="form-control" id="reason-input">
+        </div>
+        <div class="form-group">
+            <label for="peer-review">Peer Review</label>
+            <input type="text" class="form-control" id="peer-review-input">
+        </div>
+        <div class="form-group">
+            <label for="reported-by">Reported By</label>
+            <input type="text" class="form-control" id="reported-by-input">
+        </div>
+        <div class="form-group">
+            <label for="notes">Additional Notes</label>
+            <input type="text" class="form-control" id="notes-input">
+        </div>
+        </form>
+        <button type="button" class="btn btn-primary" id="submit-button">Submit</button>
+        </div>
+    </div> 
+    <script type="text/javascript" src="assets/app.js"></script>
+    
+</body>
+</html>
+
