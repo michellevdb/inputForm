@@ -93,8 +93,8 @@ $(document).ready(function() {
           );
   
           $("#data-table > tbody").prepend(data);
-  
-      
+
      });
+     
   
   });
