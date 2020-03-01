@@ -82,7 +82,7 @@ $(document).ready(function() {
           var notes = childSnapshot.val().notes;
       
         //append new data to table
-          var data = $("<tr>").append (
+          var data = $("<tr>").prepend (
               $("<td>").text(date),
               $("<td>").text(task),
               $("<td>").text(reclassify),
@@ -92,7 +92,7 @@ $(document).ready(function() {
               $("<td>").text(notes),
           );
   
-          $("#data-table > tbody").append(data);
+          $("#data-table > tbody").prepend(data);
   
       
      });
