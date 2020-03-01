@@ -1,8 +1,8 @@
 $(document).ready(function() {
-     
+    var myKey = secretKey.MY_KEY;
     // Initialize Firebase
     var config = {
-        apiKey: "AIzaSyD2A0TxoHn6hpY3QDxnwQKyfRlDgcuKD2A",
+        apiKey: myKey,
         authDomain: "inputform-3d1c3.firebaseapp.com",
         databaseURL: "https://inputform-3d1c3.firebaseio.com",
         projectId: "inputform-3d1c3",
