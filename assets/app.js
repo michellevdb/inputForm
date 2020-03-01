@@ -15,10 +15,13 @@ $(document).ready(function() {
 
     var database = firebase.database();
     
+    //submit button 
       $("#submit").on("click", function(event){
-       
+      
           event.preventDefault();
-          
+
+          //assign ID to jQuery variable
+        
           var $date = $("#date-input").val().trim();
           var $task = $("#task-link-input").val().trim();
           var $reclassify = $("#reclassification-input").val().trim();
@@ -26,7 +29,9 @@ $(document).ready(function() {
           var $reviewBy = $("#peer-review-input").val().trim();
           var $reportBy = $("#reported-by-input").val().trim();
           var $notes = $("#notes-input").val().trim();
-  
+          
+          //if input fields are blank open alert
+          
           if ($date === "" || 
               $task === "" ||
               $reclassify === "" ||
@@ -36,7 +41,9 @@ $(document).ready(function() {
               $notes === "") {
 
               alert("Please Enter Alert Information");
-  
+
+          //store input into object 
+
           } else {
   
           var newData = {
@@ -48,9 +55,8 @@ $(document).ready(function() {
               reviewBy:  $reviewBy,
               reportBy: $reportBy,
               notes: $notes
-
               };
-  
+          //push information to database
           database.ref().push(newData);
   
           $("#date-input").val("");
@@ -62,7 +68,7 @@ $(document).ready(function() {
           $("#notes-input").val("");
 
           };
-  
+          
       });
       
       database.ref().on("child_added", function(childSnapshot) {
@@ -75,8 +81,8 @@ $(document).ready(function() {
           var reportBy = childSnapshot.val().reportBy;
           var notes = childSnapshot.val().notes;
       
-  
-          var newData = $("<tr>").append (
+        //append new data to table
+          var data = $("<tr>").append (
               $("<td>").text(date),
               $("<td>").text(task),
               $("<td>").text(reclassify),
@@ -86,7 +92,7 @@ $(document).ready(function() {
               $("<td>").text(notes),
           );
   
-          $("#data-table > tbody").append(newData);
+          $("#data-table > tbody").append(data);
   
       
      });
