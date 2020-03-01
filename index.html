@@ -12,6 +12,7 @@
     <title>De-escalated Alerts</title>
 </head>
 <body>
+    
     <!-- Header -->
     <div class="container">
 
@@ -26,14 +27,17 @@
     <!-- Input Form -->
     <form>
         <table class="table"><h2>Add De-escalated Alert</h2>
-        <div class="form-group">
+        
+            <div class="form-group">
             <label for="date-input">Date</label>
             <input type="date"  class="form-control" id="date-input">
         </div>
+        
         <div class="form-group">
             <label for="task-link-input">Task Link</label>
             <input type="text" class="form-control" id="task-link-input">
         </div>
+        
         <div class="form-group input-group-prepend">
                 <label class="input-group-text" for="reclassification-input">Reclassification</label>
             <select class="custom-select btn form-control" id="reclassification-input">
@@ -44,32 +48,38 @@
                 <option value="Suicide Research">Suicide Research</option>
             </select>
         </div>
+        
         <div class="form-group">
             <label for="reason-input">Reason</label>
             <input type="text" class="form-control" id="reason-input">
         </div>
+        
         <div class="form-group">
             <label for="peer-review-input">Peer Review</label>
             <input type="text" class="form-control" id="peer-review-input">
         </div>
+        
         <div class="form-group">
             <label for="reported-by-input">Reported By</label>
             <input type="text" class="form-control" id="reported-by-input">
         </div>
+        
         <div class="form-group">
             <label for="notes-input">Additional Notes</label>
             <input type="text" class="form-control" id="notes-input">
         </div>
         </form>
-
+    
+    <!--submit button-->
         <button type="button" class="btn btn-primary btn-outline-light" id="submit">Submit</button>
         </div>
 
-        <hr><hr>
-        <hr style="border:1px dashed rgb(77, 113, 134)">
+        <hr>
+        <hr>
+            <hr style="border:1px dashed rgb(77, 113, 134)">
         <hr>
 
-          <!-- Input Data Table -->
+    <!-- Input Data Table -->
     
     <table class="table" id="data-table">
         <h2><center>Recent De-escalated Alerts</h2></center>

@@ -41,8 +41,7 @@ $(document).ready(function() {
 
               alert("Please Enter Alert Information");
 
-          //store input into object 
-
+        //store input into object 
           } else {
   
           var newData = {
@@ -55,7 +54,8 @@ $(document).ready(function() {
               reportBy: $reportBy,
               notes: $notes
               };
-          //push information to database
+          
+        //push information to database
           database.ref().push(newData);
   
           $("#date-input").val("");
@@ -69,7 +69,7 @@ $(document).ready(function() {
           };
           
       });
-      
+      //retrieve data
       database.ref().on("child_added", function(childSnapshot) {
   
           var date = childSnapshot.val().date;
