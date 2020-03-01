@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    
+     
     // Initialize Firebase
     var config = {
         apiKey: "AIzaSyD2A0TxoHn6hpY3QDxnwQKyfRlDgcuKD2A",
@@ -34,11 +34,10 @@ $(document).ready(function() {
           
           if ($date === "" || 
               $task === "" ||
-              $reclassify === "" ||
+              //$reclassify === "" ||
               $reason === "" ||
               $reviewBy === "" ||
-              $reportBy === "" ||
-              $notes === "") {
+              $reportBy === "") {
 
               alert("Please Enter Alert Information");
 
@@ -95,6 +94,5 @@ $(document).ready(function() {
           $("#data-table > tbody").prepend(data);
 
      });
-     
   
   });

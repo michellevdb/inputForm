@@ -25,18 +25,24 @@
   
     <!-- Input Form -->
     <form>
-        <table class="table"><h1>Add De-escalated Alert</h1>
+        <table class="table"><h2>Add De-escalated Alert</h2>
         <div class="form-group">
             <label for="date-input">Date</label>
-            <input type="date" class="form-control" id="date-input">
+            <input type="date"  class="form-control" id="date-input">
         </div>
         <div class="form-group">
             <label for="task-link-input">Task Link</label>
             <input type="text" class="form-control" id="task-link-input">
         </div>
-        <div class="form-group">
-            <label for="reclassification-input">Reclassification</label>
-            <input type="text" class="form-control" id="reclassification-input">
+        <div class="form-group input-group-prepend">
+                <label class="input-group-text" for="reclassification-input">Reclassification</label>
+            <select class="custom-select btn form-control" id="reclassification-input">
+                <option selected>Please select a classifcation</option>
+                <option value="Suicide Ideation">Suicide Ideation</option>
+                <option value="Self-Harm">Self-Harm</option>
+                <option value="Help & Support">Help & Support</option>
+                <option value="Suicide Research">Suicide Research</option>
+            </select>
         </div>
         <div class="form-group">
             <label for="reason-input">Reason</label>
@@ -59,11 +65,15 @@
         <button type="button" class="btn btn-primary btn-outline-light" id="submit">Submit</button>
         </div>
 
+        <hr><hr>
+        <hr style="border:1px dashed rgb(77, 113, 134)">
+        <hr>
 
           <!-- Input Data Table -->
     
     <table class="table" id="data-table">
-        <h1>Recent De-escalated Alerts</h1>
+        <h2><center>Recent De-escalated Alerts</h2></center>
+        
         <thead>
           <tr>
             <th scope="col">Date</th>
